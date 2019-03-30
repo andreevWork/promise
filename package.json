@@ -1,0 +1,28 @@
+{
+  "name": "promise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "promise.js",
+  "scripts": {
+    "test": "node promise.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreevWork/promise.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andreevWork/promise/issues"
+  },
+  "homepage": "https://github.com/andreevWork/promise#readme",
+  "devDependencies": {
+    "jest": "^24.5.0",
+    "promises-aplus-tests": "^2.1.2"
+  },
+  "dependencies": {
+    "asap": "^2.0.6",
+    "setasap": "^2.0.1"
+  }
+}
