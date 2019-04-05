@@ -4,7 +4,8 @@
   "description": "",
   "main": "promise.js",
   "scripts": {
-    "test": "node promise.test.js"
+    "test": "node promise.test.js",
+    "test:utils": "jest promise.utils.test.js"
   },
   "repository": {
     "type": "git",

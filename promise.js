@@ -7,6 +7,12 @@ class MyPromise {
     throw reason;
   }
 
+  static getThenable(x) {
+    const then = x && x.then;
+
+    return typeof then === 'function' ? then : null;
+  }
+
   static _isPromiseDone(promiseState) {
     return promiseState !== MyPromise.States.pending;
   }
@@ -37,12 +43,12 @@ class MyPromise {
       let done = false;
 
       try {
-        then = x && x.then;
+        then = MyPromise.getThenable(x);
       } catch (rejectedReason) {
         nextPromise._rejectPromise(rejectedReason);
       }
 
-      if (typeof then === 'function') {
+      if (then) {
 
         try {
           then.call(x, y => {
